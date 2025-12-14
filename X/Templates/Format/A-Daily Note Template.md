@@ -9,15 +9,6 @@ week: '[[<% tp.date.now("YYYY [Week] WW") %>]]'
 
 [[<% tp.date.yesterday("YYYY-MM-DD") %>|↶ Previous Day]] | [[<% tp.date.tomorrow("YYYY-MM-DD") %>|Following Day ↷]]
 
-# Daily Mood 
-
- `INPUT[inlineSelect(option('🙂 – Neutral'), option('😄 – Happy'), option('😐 – Meh'), option('😞 – Sad'), option('😠 – Frustrated'), showcase):daily-mood]`
-
-
----
-
-
-
 # Work Log #log
 
 <%tp.file.cursor()%>
@@ -25,12 +16,8 @@ week: '[[<% tp.date.now("YYYY [Week] WW") %>]]'
 ---
 
 
-# Capture #capture
-
-
-
 <%*
-const folderPath = "Calendar & Review/Daily Notes";
+const folderPath = "04 Calendar & Review/Daily Notes";
 if (!tp.app.vault.getAbstractFileByPathInsensitive(folderPath)) {
   await tp.app.vault.createFolder(folderPath);
 }
